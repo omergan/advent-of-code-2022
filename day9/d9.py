@@ -37,7 +37,7 @@ def update(head: Knot, tail:Knot) -> Knot:
     visited.add((tail.x, tail.y) if tail.id == SIZE-1 else (0,0))
     return Knot(id=tail.id, x=tail.x, y=tail.y)
 
-def simulate()-> None:
+def simulate()-> int:
     for c in commands:
         direction, steps = tuple(c.split(" "))
         steps = int(steps)
